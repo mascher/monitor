@@ -35,7 +35,8 @@ const PORT = global.config.port;
 /* MongoDB Connection */
 mongoose.set('debug', false);
 mongoose.Promise = Promise;
-mongoose.connect(global.config.mongodb_uri, (err) => {
+/* remove for testing mongoose.connect(global.config.mongodb_uri, (err) => { */
+mongoose.connect("mongodb://admin:Cheese123@ds239931.mlab.com:39931/luke-mongo", (err) => {
 	if (!err) {
 
 		Product.remove({}, function(err) {

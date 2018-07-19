@@ -7,6 +7,10 @@ require('console-stamp')(console, {
 	}
 });
 
+/*Kurt test*/
+var options = {
+  useMongoClient: true};
+
 /* Moduless */
 const mongoose = require('mongoose');
 const express = require('express');
@@ -36,7 +40,7 @@ const PORT = global.config.port;
 mongoose.set('debug', false);
 mongoose.Promise = Promise;
 /* remove for testing mongoose.connect(global.config.mongodb_uri, (err) => { */
-mongoose.connect("mongodb://admin:Cheese123@ds239931.mlab.com:39931/luke-mongo", useMongoClient: true, (err) => {
+mongoose.connect("mongodb://admin:Cheese123@ds239931.mlab.com:39931/luke-mongo", options, (err) => {
 	if (!err) {
 
 		Product.remove({}, function(err) {

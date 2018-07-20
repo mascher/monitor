@@ -29,6 +29,8 @@ const Product = require('./src/models/Product');
 const app = express();
 app.server = http.createServer(app);
 
+console.log(`The server was created`);
+
 global.status = 'Stopped';
 global.tasks = [];
 global.logs = '';
@@ -37,6 +39,7 @@ global.config = require('./config')
 const PORT = global.config.port;
 
 /* MongoDB Connection */
+console.log(`Starting the mongo connection`);
 mongoose.set('debug', false);
 mongoose.Promise = Promise;
 /* remove for testing mongoose.connect(global.config.mongodb_uri, (err) => { */

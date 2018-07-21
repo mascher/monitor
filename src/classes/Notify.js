@@ -6,12 +6,13 @@ let Notify = {};
 Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 
 	let myWebhook = new DiscordWebhook(webhook_url);
-	if (isNaN(metadata.stock)) {
+/*test comment out the next few lines that have an error */	
+/*	if (isNaN(metadata.stock)) {
 		let stock = 'Unavailable'
 	} else {
 		let stock = metadata.stock
 	}
-
+*/
 	let price = metadata.price
 
 	let links;

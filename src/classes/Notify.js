@@ -51,11 +51,13 @@ Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 					"name": "Notification Type",
 					"value": type,
 					"inline": true
-				}, {
+				},
+/*					   {
 					"name": "Stock Count",
 					"value": stock,
 					"inline": true
-				}, {
+				}, */ 
+				{
 					"name": "Brand",
 					"value": brand,
 					"inline": true
